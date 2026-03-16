@@ -13,17 +13,17 @@ $light.addEventListener("click", () => {
 
 $form.addEventListener("submit", () => {
 	if (est == false) {
+		est = true;
 		$switch.textContent = "Off";
 		$menuspan.textContent = "Off";
-		est = true;
 		$glowstone.setAttribute("src", "assets/glowstone-on.webp");
 		$body.classList.remove("light-off");
 		$body.classList.add("light-on");
 	} else {
+		est = false;
+        $glowstone.setAttribute("src", "assets/glowstone-off.webp");
 		$switch.textContent = "On";
 		$menuspan.textContent = "On";
-		est = false;
-		$glowstone.setAttribute("src", "assets/glowstone-off.webp");
 		$body.classList.remove("light-on");
 		$body.classList.add("light-off");
 	}
